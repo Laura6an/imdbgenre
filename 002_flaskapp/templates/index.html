@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <body>
+  
+  <h1>Predict Genre of Movies</h1>
+  
+  <form method="POST" action="/">
+
+    <label for="title">Title: </label>
+    <input type="text" id="title" name="title" value=Cupid>
+    <br><br>
+
+    <label for="year">Year: </label>
+    <input type="number" id="year" name="year" size="67" value=1997>
+    <br><br>
+    <label for="summary">Summary: </label><br>
+
+   <textarea id="summary" rows="8" cols="50" name="summary" placeholder="Enter the summary of the movie">A brother and sister with a past incestuous relationship have a current murderous relationship. He murders the women who reject him and she murders the women who get too close to him.</textarea>
+      <br/>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+
+  {% if pred %}
+  <p>The genre of this movie is: {{ pred }}</p>
+  {% endif %}
+
+  </body>
+</html>
